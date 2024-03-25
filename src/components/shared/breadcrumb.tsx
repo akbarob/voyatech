@@ -12,7 +12,7 @@ export default function Breadcrumb({ route, sroute }: Props) {
         <div className="flex mb-5">
             <p>Home /</p>
             <p className={`${route && !sroute && "font-semibold"}`}>{route} </p>
-            {sroute && <p className="font-bold">{`/${sroute}`}</p>}
+            {sroute && <p className="font-bold capitalize">{`/${sroute}`}</p>}
         </div>
     );
 }

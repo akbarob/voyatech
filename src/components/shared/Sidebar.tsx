@@ -20,7 +20,7 @@ export default function Sidebar() {
     console.log(pathname);
 
     return (
-        <div className=" w-[300px] h-[500px] bg-white mt-10 rounded-[8px]">
+        <div className=" w-[300px] h-[600px] bg-white mt-10 rounded-[8px]">
             <ul>
                 {" "}
                 {links.map((link, i) => (
@@ -42,6 +42,21 @@ export default function Sidebar() {
                         {link.route}
                     </Link>
                 ))}
+                <div className="flex bg-secondary/10 w-[250px] mx-auto  items-center gap-3 my-2">
+                    {" "}
+                    <Image
+                        src={`/assets/images/logo.svg`}
+                        width={100}
+                        height={100}
+                        sizes="100"
+                        alt="logo"
+                        className="w-[58.16px] h-[56px]"
+                    />{" "}
+                    <div>
+                        <p className="font-semibold">GoSchool</p>
+                        <p>Admin Account</p>
+                    </div>
+                </div>
             </ul>
         </div>
     );
