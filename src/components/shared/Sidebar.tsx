@@ -20,7 +20,7 @@ export default function Sidebar() {
     console.log(pathname);
 
     return (
-        <div className=" w-[300px] h-[700px] bg-white mt-10 rounded-[8px]">
+        <div className=" w-[300px] h-[500px] bg-white mt-10 rounded-[8px]">
             <ul>
                 {" "}
                 {links.map((link, i) => (

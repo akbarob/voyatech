@@ -65,8 +65,8 @@ export default function Page() {
                         sroute={"subject"}
                     />
                 </div>
-                <div className="bg-white rounded-[8px] w-full">
-                    <div className="flex justify-between w-[1150px] p-2">
+                <div className="bg-white rounded-[8px] w-full p-4">
+                    <div className="flex justify-between w-[1100px] flex-1 p-2">
                         <div>
                             <p>All subjects</p>
                         </div>
@@ -80,11 +80,18 @@ export default function Page() {
                         </div>
                     </div>
                     <div className="h-full">
+                        <div className="flex gap-2 h-[56px] bg-[#00004A] text-white w-full justify-between px-2 items-center">
+                            <div className="w-[150px] capitalize">subject</div>
+                            <div className="capitalize">instructor</div>
+                            <div>Enrolled Students</div>
+                            <div>status</div>
+                            <div>Edit/ Delete </div>
+                        </div>
                         {subject.map((item, i) => (
                             <div
                                 key={i}
-                                className="flex gap-2 h-[56px] odd:bg-white even:bg-[#F0F0F0] w-full justify-between px-2">
-                                <div className="w-[200px] capitalize">
+                                className="items-center flex gap-2 h-[56px] odd:bg-white even:bg-[#F0F0F0] w-full justify-between px-2">
+                                <div className="w-[150px] capitalize">
                                     {item.subject}
                                 </div>
                                 <div className="capitalize">

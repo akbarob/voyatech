@@ -8,7 +8,7 @@ export default function Dashboardlayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col w-screen">
             <Header />
             <div className="bg-[#F0F2F5] flex justify-between">
                 <div className="flex justify-start px-5">
