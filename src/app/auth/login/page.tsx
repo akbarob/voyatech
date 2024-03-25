@@ -1,4 +1,4 @@
-import InputField from "@/app/components/ui/input/input";
+import InputField from "@/components/ui/input/input";
 import Image from "next/image";
 import { Input } from "postcss";
 import React from "react";
