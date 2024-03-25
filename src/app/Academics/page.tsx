@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/shared/breadcrumb";
 import Image from "next/image";
 import Chart from "chart.js/auto";
 import Link from "next/link";
+import MyChart from "@/components/shared/Chart";
 const quicklinks = [
     { icon: "subject", route: "subjects" },
     { icon: "grade", route: "grade" },
@@ -87,7 +88,9 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <div>{/* <Chart /> */}</div>
+                            <div>
+                                <MyChart />
+                            </div>
                         </div>
                         <div className="w-[47%] h-[475px] bg-white rounded-[8px] p-5">
                             <div className="w-full flex  justify-between items-center">

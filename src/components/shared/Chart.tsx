@@ -1,3 +1,5 @@
+"use client";
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -17,7 +19,7 @@ ChartJS.register(
     Tooltip
 );
 
-const Chart = () => {
+const MyChart = () => {
     return (
         <div>
             <Line
@@ -42,4 +44,4 @@ const Chart = () => {
         </div>
     );
 };
-export default Chart;
+export default MyChart;
