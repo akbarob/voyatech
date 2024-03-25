@@ -92,7 +92,7 @@ export default function Home() {
                                 <MyChart />
                             </div>
                         </div>
-                        <div className="w-[47%] h-[475px] bg-white rounded-[8px] p-5">
+                        <div className="w-[47%] h-full bg-white rounded-[8px] p-5">
                             <div className="w-full flex  justify-between items-center">
                                 <div className="flex flex-col justify-start items-start">
                                     <p>Performance</p>
@@ -101,14 +101,16 @@ export default function Home() {
                                 <div className="fle flex-col justify-start items-start">
                                     <p>Select Class</p>
                                     <div>
-                                        <select className="w-[150px] h-[50px] border border-secondary rounded-[8px] accent-secondary">
+                                        <select className="w-[150px] h-[50px] border border-secondary rounded-[8px]">
                                             <option>Class 1A</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
+                            <div>
+                                <MyChart />
+                            </div>
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </Dashboardlayout>
