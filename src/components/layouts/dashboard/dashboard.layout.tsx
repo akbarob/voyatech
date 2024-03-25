@@ -11,11 +11,11 @@ export default function Dashboardlayout({
         <div className="flex flex-col w-screen">
             <Header />
             <div className="bg-[#F0F2F5] flex justify-between">
-                <div className="flex justify-start px-5">
+                <div className="flex justify-start px-5 ">
                     <Sidebar />
                 </div>
 
-                <main className="flex flex-1 w-full p-8 overflow-auto">
+                <main className="flex flex-1  p-8 overflow-auto mx-auto w-full">
                     {children}
                 </main>
             </div>

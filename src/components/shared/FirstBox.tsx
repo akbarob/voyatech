@@ -13,16 +13,14 @@ export default function FirstBox({ title, digit, icon }: Props) {
             <p className="text-[#667185]">{title}</p>
             <div className="flex justify-between p-4">
                 <p className="font-bold">{digit}</p>
-                <div className="bg-primary/10 rounded-full p-2">
-                    <Image
-                        src={`/assets/images/${icon}.svg`}
-                        width={100}
-                        height={100}
-                        sizes="100"
-                        className=" h-[22px] w-[26px]"
-                        alt="icon"
-                    />
-                </div>
+                <Image
+                    src={`/assets/images/${icon}.png`}
+                    width={100}
+                    height={100}
+                    sizes="100"
+                    className="w-[46px] h-[44px]"
+                    alt="icon"
+                />
             </div>
         </div>
     );

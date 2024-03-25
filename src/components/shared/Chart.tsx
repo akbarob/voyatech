@@ -4,39 +4,66 @@ import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
+    BarElement,
+    Title,
     Tooltip,
-    PointElement,
-    LineElement,
+    Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
-
+import { Bar } from "react-chartjs-2";
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    PointElement,
-    LineElement,
-    Tooltip
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
 );
-
+export const options = {
+    indexAxis: "y" as const,
+    length: 100,
+    elements: {
+        bar: {
+            borderWidth: 0,
+        },
+    },
+    responsive: true,
+    plugins: {
+        // legend: {
+        //     position: "right" as const,
+        // },
+        // title: {
+        //     display: true,
+        //     text: "Chart.js Horizontal Bar Chart",
+        // },
+    },
+};
 const MyChart = () => {
     return (
-        <div>
-            <Line
+        <div className="">
+            <Bar
+                width={900}
+                height={900}
+                options={options}
                 data={{
                     labels: [
-                        "2023-01",
-                        "2023-02",
-                        "2023-03",
-                        "2023-04",
-                        "2023-05",
-                        "2023-06",
-                        "2023-07",
+                        "Mathematics",
+                        "English",
+                        "Yoruba",
+                        "Physics",
+                        "Commerce",
+                        "Computer",
+                        "Agric",
+                        "Economics",
+                        "Arts",
+                        "Biology",
                     ],
                     datasets: [
                         {
-                            data: [100, 120, 115, 134, 168, 132, 200],
-                            backgroundColor: "purple",
+                            label: "Data",
+                            data: [100, 90, 80, 60, 52, 49, 46, 38, 35, 20],
+                            backgroundColor: "blue",
+                            barThickness: 20,
                         },
                     ],
                 }}
@@ -44,4 +71,5 @@ const MyChart = () => {
         </div>
     );
 };
+
 export default MyChart;
