@@ -12,7 +12,7 @@ const headerlinks = [
 
 export default function Header() {
     return (
-        <div className=" mx-8 flex justify-between items-center text-[14px]">
+        <div className=" p-4 flex justify-between items-center text-[14px] w-full">
             <div className="flex gap-4 justify-center items-center">
                 {" "}
                 <Image
@@ -21,16 +21,16 @@ export default function Header() {
                     height={100}
                     sizes="100"
                     alt="logo"
-                    className="w-[58.16px] h-[56px]"
+                    className="w-[48.16px] h-[46px]"
                 />
-                <div className="flex justify-center items-center pt-4">
+                <div className="flex justify-center items-center ">
                     <InputField
                         name="search"
                         isPassword={false}
                         type="search"
                         placeholder="Search"
-                        label=""
                         required={false}
+                        icon="search"
                     />
                 </div>
             </div>

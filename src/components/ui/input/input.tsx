@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type InputProps = {
@@ -6,7 +7,8 @@ type InputProps = {
     required: boolean;
     placeholder: string;
     isPassword: boolean;
-    label: string;
+    label?: string;
+    icon?: string;
 };
 export default function InputField({
     type,
@@ -15,9 +17,10 @@ export default function InputField({
     label,
     placeholder,
     isPassword = false,
+    icon,
 }: InputProps) {
     return (
-        <div className="">
+        <div className="border-secondary bg-secondary/10 flex justify-between items-center border   py-4 px-2 rounded-[4px] h-[46px] w-full ">
             <label htmlFor={name} className="text-sm mb-2 ">
                 {label}
 
@@ -27,10 +30,20 @@ export default function InputField({
                     </span>
                 )}
             </label>
+            {icon && (
+                <Image
+                    src={`/assets/images/${icon}.svg`}
+                    width={100}
+                    height={100}
+                    sizes="100"
+                    alt="logo"
+                    className="w-[24px] h-[24px]"
+                />
+            )}
             <input
                 type={type}
                 placeholder={placeholder}
-                className="border-secondary bg-secondary/10 border p-4 rounded-[4px] h-[56px] w-full mb-[24px]"
+                className="bg-transparent"
                 id={name}
             />
         </div>
