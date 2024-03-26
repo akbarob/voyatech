@@ -20,7 +20,7 @@ export default function InputField({
     icon,
 }: InputProps) {
     return (
-        <div className="border-secondary bg-secondary/10 flex justify-between items-center border   py-4 px-2 rounded-[4px] h-[46px] w-full ">
+        <div className="border-secondary bg-secondary/10 flex justify-start gap-2 items-center border   py-4 px-2 rounded-[4px] h-[46px] w-[400px] ">
             <label htmlFor={name} className="text-sm mb-2 ">
                 {label}
 
