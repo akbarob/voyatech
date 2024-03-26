@@ -12,7 +12,7 @@ export default function FirstBox({ title, digit, icon }: Props) {
         <div className="bg-[#FAFCFF] w-full h-[120px] rounded-[6px] p-4">
             <p className="text-[#667185]">{title}</p>
             <div className="flex justify-between p-4">
-                <p className="font-bold">{digit}</p>
+                <p className="font-bold text-black">{digit}</p>
                 <Image
                     src={`/assets/images/${icon}.png`}
                     width={100}

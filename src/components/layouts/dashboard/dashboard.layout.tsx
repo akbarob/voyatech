@@ -9,13 +9,16 @@ export default function Dashboardlayout({
 }) {
     return (
         <div className="flex flex-col w-screen">
-            <Header />
-            <div className="bg-[#F0F2F5] flex justify-between">
-                <div className="flex justify-start px-5 ">
+            <div>
+                {" "}
+                <Header />
+            </div>
+            <div className="bg-[#F0F2F5] flex justify-between w-screen max-w-screen">
+                <div className=" px-5 ">
                     <Sidebar />
                 </div>
 
-                <main className="flex flex-1  p-8 overflow-auto mx-auto w-full">
+                <main className="flex flex-1  p-8 overflow-auto mx-auto ">
                     {children}
                 </main>
             </div>

@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const links = [
-    { icon: "Exam", route: "dashboard" },
-    { icon: "Exam", route: "Class Management" },
-    { icon: "Exam", route: "Staff Management" },
-    { icon: "Exam", route: "Student Management" },
-    { icon: "Exam", route: "Parent Management" },
-    { icon: "Exam", route: "Academics" },
-    { icon: "Exam", route: "School Management" },
-    { icon: "Exam", route: "Finance Management" },
+    { icon: "Exam", route: "dashboard", label: "Dashboard" },
+    { icon: "sDashboard", route: "class", label: "Class Management" },
+    { icon: "class", route: "staff", label: "Staff Management" },
+    { icon: "student", route: "student", label: "Student Management" },
+    { icon: "Exam", route: "parent", label: "Parent Management" },
+    { icon: "parent", route: "academics Management", label: "academics" },
+    { icon: "scholl", route: "school", label: "School Management" },
+    { icon: "wallet", route: "finance", label: "Finance Management" },
 ];
 export default function Sidebar() {
     const pathname = usePathname();
@@ -29,8 +29,8 @@ export default function Sidebar() {
                         href={`/${link.route}`}
                         className={`${
                             pathname?.includes(link.route) &&
-                            "text-primary bg-[#F3F7FF] rounded-[4px]"
-                        } capitalize flex justify-start items-center px-4 gap-6 w-[252px] h-[56px] mx-auto`}>
+                            "text-primary bg-[#F3F7FF]"
+                        } capitalize flex justify-start items-center px-4 gap-6 w-[252px] h-[56px] mx-auto  hover:bg-primary hover:text-white  rounded-[4px]`}>
                         <Image
                             src={`/assets/images/${link.icon}.svg`}
                             width={100}
@@ -39,7 +39,7 @@ export default function Sidebar() {
                             className=" h-[22px] w-[26px]"
                             alt="icon"
                         />
-                        {link.route}
+                        {link.label}
                     </Link>
                 ))}
                 <div className="flex bg-secondary/10 w-[250px] mx-auto  items-center gap-3 my-2">

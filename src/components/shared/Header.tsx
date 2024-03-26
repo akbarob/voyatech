@@ -12,7 +12,7 @@ const headerlinks = [
 
 export default function Header() {
     return (
-        <div className="w-screen flex justify-between px-4 items-center">
+        <div className=" mx-8 flex justify-between items-center text-[14px]">
             <div className="flex gap-4 justify-center items-center">
                 {" "}
                 <Image
@@ -35,7 +35,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="flex justify-end items-center">
+            <div className="  flex justify-end items-center">
                 {" "}
                 <ul className="flex gap-[24px]">
                     {headerlinks.map((link, i) => (
@@ -69,15 +69,21 @@ export default function Header() {
                     />
                     <p>Notifications</p>
                 </Link>
-                <Link
-                    href={`#`}
-                    className="flex flex-col justify-center items-center">
+                <Link href={`#`} className="flex  justify-center items-center">
                     <Image
                         src={`/assets/images/avatar.png`}
                         width={100}
                         height={100}
                         sizes="100"
                         className=" h-[44px] w-[45px]"
+                        alt="icon"
+                    />{" "}
+                    <Image
+                        src={`/assets/images/down.png`}
+                        width={100}
+                        height={100}
+                        sizes="100"
+                        className=" h-[24px] w-[24px]"
                         alt="icon"
                     />
                 </Link>

@@ -31,7 +31,7 @@ export default function Home() {
                     />
                 </div>
                 <div>
-                    <p className="font-semibold my-2">Quick Links</p>
+                    <p className="font-semibold my-2 text-black">Quick Links</p>
                     <div className="grid grid-cols-5 gap-10">
                         {" "}
                         {quicklinks.map((item, i) => (
@@ -52,7 +52,7 @@ export default function Home() {
                                     />
                                 </div>
 
-                                <p className="text-[16px] capitalize font-semibold">
+                                <p className="text-[16px] capitalize font-semibold text-black">
                                     {item.label}
                                 </p>
                             </Link>

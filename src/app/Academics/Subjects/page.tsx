@@ -4,8 +4,17 @@ import Breadcrumb from "@/components/shared/breadcrumb";
 import React from "react";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import Image from "next/image";
+import Link from "next/link";
 
 const subject = [
+    {
+        subject: "Calculus",
+        instructor: "Akbar",
+        EnroolledStudents: "7",
+        status: "active",
+        blank: "/calculus",
+    },
     {
         subject: "English",
         instructor: "instructor",
@@ -65,22 +74,36 @@ export default function Page() {
                         sroute={"subject"}
                     />
                 </div>
-                <div className="bg-white rounded-[8px] w-full p-4">
-                    <div className="flex justify-between w-[1100px] flex-1 p-2">
-                        <div>
+                <div className="bg-white rounded-[8px] w-full p-4 mx-auto">
+                    <div className="flex justify-between  mb-3 w-full flex-1 p-2">
+                        <div className="flex  items-center ">
                             <p>All subjects</p>
                         </div>
                         <div className="flex gap-4">
-                            <button className="bg-[#F7F9FC] border border-secondary rounded-[8px] px-4 py-2">
-                                import{" "}
+                            <button className="bg-[#F7F9FC] border border-secondary rounded-[8px] px-4 py-2 flex gap-2 items-center">
+                                <Image
+                                    src="/assets/images/import.png"
+                                    alt="edit"
+                                    width={100}
+                                    height={100}
+                                    className="h-[20px] w-[20px]"
+                                />{" "}
+                                <p>import </p>
                             </button>
-                            <button className="bg-[#F7F9FC] border border-secondary rounded-[8px] px-4 py-2">
-                                Add Subject{" "}
+                            <button className="bg-[#F7F9FC] border border-secondary rounded-[8px] px-4 py-2 flex gap-2 items-center">
+                                <Image
+                                    src="/assets/images/plus.png"
+                                    alt="edit"
+                                    width={100}
+                                    height={100}
+                                    className="h-[20px] w-[20px]"
+                                />
+                                <p>Add Subject </p>
                             </button>
                         </div>
                     </div>
-                    <div className="h-full">
-                        <div className="flex gap-2 h-[56px] bg-[#00004A] text-white w-full justify-between px-2 items-center">
+                    <div className="h-full ">
+                        <div className="gap-2 h-[56px] bg-[#00004A] text-white w-full justify-start items-center grid grid-cols-5 px-2 place-content-center place-items-center">
                             <div className="w-[150px] capitalize">subject</div>
                             <div className="capitalize">instructor</div>
                             <div>Enrolled Students</div>
@@ -88,9 +111,10 @@ export default function Page() {
                             <div>Edit/ Delete </div>
                         </div>
                         {subject.map((item, i) => (
-                            <div
+                            <Link
+                                href={"/Academics/Subjects/calculus"}
                                 key={i}
-                                className="items-center flex gap-2 h-[56px] odd:bg-white even:bg-[#F0F0F0] w-full justify-between px-2">
+                                className="grid grid-cols-5 gap-2 h-[56px] place-content-center place-items-center odd:bg-white even:bg-[#F0F0F0] w-full justify-between px-2">
                                 <div className="w-[150px] capitalize">
                                     {item.subject}
                                 </div>
@@ -104,18 +128,30 @@ export default function Page() {
                                         {item.status}
                                     </button>
                                 </div>
-                                <div>
+                                <div className="flex">
                                     {" "}
-                                    <button className="text-[#0D6EFD]  px-3 py-2 capitalize font-semibold">
-                                        {" "}
-                                        Edit
+                                    <button className="text-[#0D6EFD]  px-3 py-2 capitalize font-semibold flex gap-4 items-center">
+                                        <Image
+                                            src="/assets/images/edit.png"
+                                            alt="edit"
+                                            width={100}
+                                            height={100}
+                                            className="h-[20px] w-[20px]"
+                                        />
+                                        <p>Edit</p>
                                     </button>
-                                    <button className="text-[#0D6EFD] px-3 py-2 capitalize font-semibold">
-                                        {" "}
-                                        Delete
+                                    <button className="text-[#0D6EFD] px-3 py-2 capitalize font-semibold flex items-center gap-4">
+                                        <Image
+                                            src="/assets/images/delete.png"
+                                            alt="edit"
+                                            width={100}
+                                            height={100}
+                                            className="h-[20px] w-[20px]"
+                                        />
+                                        <p>Delete</p>
                                     </button>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
