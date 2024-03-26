@@ -222,7 +222,7 @@ export default function Page() {
                         <div className="gap-2 flex justify-between w-full my-[32px]">
                             <div className="flex gap-2">
                                 {" "}
-                                <button className="flex gap-2 justify-center bg-warning/10 text-warning text-white px-4 py-2 rounded-[6px]">
+                                <button className="flex gap-2 justify-center bg-warning/10 text-warning  px-4 py-2 rounded-[6px]">
                                     {" "}
                                     <Image
                                         src={`/assets/images/warning.png`}
@@ -237,7 +237,7 @@ export default function Page() {
                                         Outstanding Assignments (2)
                                     </p>
                                 </button>
-                                <button className="flex gap-2 justify-center bg-error/10 text-error text-white px-4 py-2 rounded-[6px]">
+                                <button className="flex gap-2 justify-center bg-error/10 text-error  px-4 py-2 rounded-[6px]">
                                     {" "}
                                     <Image
                                         src={`/assets/images/error.png`}
