@@ -26,11 +26,28 @@ export default function Breadcrumb({ route, sroute, broute }: Props) {
             <p className={`${route && !sroute && "font-semibold text-black"}`}>
                 {route}{" "}
             </p>
-            {sroute && (
+            {sroute && !broute && (
                 <span
                     className={`${
-                        !broute && ""
-                    } flex justify-center items-center text-black`}>
+                        !broute && "text-black"
+                    } flex justify-center items-center capitalize font-semibold `}>
+                    {" "}
+                    <Image
+                        src={`/assets/images/right.svg`}
+                        width={100}
+                        height={100}
+                        sizes="100"
+                        className=" h-[14px] w-[14px]"
+                        alt="icon"
+                    />
+                    {`${sroute}`}
+                </span>
+            )}
+            {sroute && broute && (
+                <span
+                    className={`${
+                        !broute && "text-black"
+                    } flex justify-center items-center `}>
                     {" "}
                     <Image
                         src={`/assets/images/right.svg`}
